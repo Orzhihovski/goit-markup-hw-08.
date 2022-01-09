@@ -1,9 +1,26 @@
 .communication-list {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   list-style: none;
-}
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
+    margin-top: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+}
+.footer {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--second-bg-color);
+}
 .communication-list__item {
   width: 44px;
   height: 44px;
@@ -41,12 +58,44 @@
 }
 
 .footer-cont {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
+//   display: flex;
+//   align-items: baseline;
+// }
+
+// .footer-right {
+//   margin-left: 70px;
+// }
+
 .footer-right {
-  margin-left: 70px;
+  @media screen and (min-width: 480px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+}
+.footer-left {
+  @media screen and (min-width: 480px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+    text-align: left;
+  }
 }
 .communication {
   font-weight: bold;
@@ -56,17 +105,24 @@
   text-transform: uppercase;
 
   color: #ffffff;
-  margin-bottom: 20px;
+
+  @media screen and (min-width: 480px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 20px;
+  }
 }
 
-.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: var(--second-bg-color);
-}
 .adress-list {
   margin-top: 20px;
   list-style: none;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .adress-list__link {
@@ -116,7 +172,19 @@
 }
 
 .subscribe-container {
-  margin-left: auto;
+  // margin-left: auto;
+  @media screen and (min-width: 480px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    // margin-top: 0px;
+  }
 }
 .subscribe-button {
   display: inline-flex;
@@ -137,13 +205,17 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin-left: 12px;
+
+  @media screen and (min-width: 480px) {
+    margin-top: 20px;
+  }
 }
 .subscribe-button__icon {
   margin-left: 10px;
 }
 
 .subscribe-form__input {
-  width: 358px;
+  // width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -160,6 +232,18 @@
   line-height: 20px;
 
   color: rgba(255, 255, 255, 0.6);
+  @media screen and (min-width: 480px) {
+    width: 100%;
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 .subscribe-text {
   font-family: Roboto;
@@ -171,7 +255,17 @@
   text-transform: uppercase;
 
   color: #ffffff;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
+  @media screen and (max-width: 480px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    text-align: center;
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 .sub-but-icon {
   position: absolute;

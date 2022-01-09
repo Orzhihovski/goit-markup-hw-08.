@@ -1,3 +1,18 @@
+.section-menu {
+  background-color: var(--heder-bg-color);
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .filter-list__button {
   font-family: inherit;
   font-style: normal;
@@ -38,6 +53,7 @@
 .filter-list__item {
   display: flex;
   align-items: center;
+  margin-bottom: 8px;
 
   &:not(:last-child) {
     margin-right: 8px;
@@ -45,37 +61,71 @@
 }
 
 .filter-list {
-  display: flex;
+  // display: flex;
+  // flex-wrap: wrap;
   list-style: none;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 56px;
+  // margin-left: auto;
+  // margin-right: auto;
+  // margin-bottom: 56px;
 
-  margin-left: auto;
-  margin-right: auto;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
 }
 
 .menu-list {
-  display: flex;
-  flex-wrap: wrap;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  margin-top: -30px;
-  margin-left: -30px;
+  margin-bottom: -30px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+.menu-list__item {
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
 }
 
-.menu-list > .menu-list__item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-top: 30px;
-  margin-left: 30px;
-}
+// .menu-list > .menu-list__item {
+//   flex-basis: calc(100% / 3 - 30px);
+//   margin-top: 30px;
+//   margin-left: 30px;
+// }
 
 .picture {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
   display: flex;
 }
 
@@ -112,6 +162,10 @@
 }
 
 .picture__link {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
   display: block;
   text-decoration: none;
   &:hover,
